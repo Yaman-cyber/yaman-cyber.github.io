@@ -834,6 +834,8 @@ main {
  * skills 
  */
 
+.skill { margin-bottom: 30px; }
+
 .skills-title { margin-bottom: 20px; }
 
 .skills-list { padding: 20px; }
@@ -1006,6 +1008,9 @@ main {
   object-fit: cover;
   transition: var(--transition-1);
 }
+
+.project-img-contain { background: var(--smoky-black); }
+.project-img-contain img { object-fit: contain; }
 
 .project-item > a:hover img { transform: scale(1.1); }
 
@@ -1220,6 +1225,49 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+
+
+
+/*-----------------------------------*\
+  #DOWNLOAD CV BUTTON
+\*-----------------------------------*/
+
+.download-cv-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+.btn-download {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  border-radius: 12px;
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.btn-download::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.btn-download ion-icon { font-size: 16px; }
+
+.btn-download:hover { background: var(--bg-gradient-yellow-1); }
+.btn-download:hover::before { background: var(--bg-gradient-yellow-2); }
 
 
 
@@ -1605,16 +1653,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-list {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 25px;
+    gap: 14px;
     padding-left: 5px;
     margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
+
+  .filter-list::-webkit-scrollbar { display: none; }
 
   .filter-item button {
     color: var(--light-gray);
     font-size: var(--fs-5);
+    white-space: nowrap;
     transition: var(--transition-1);
   }
 
