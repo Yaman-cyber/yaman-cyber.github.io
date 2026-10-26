@@ -1,0 +1,14 @@
+// promptfooconfig.yaml
+# run with: npx promptfoo@latest eval
+prompts:
+  - file://prompts/docbot.txt
+providers:
+  - anthropic:messages:claude-sonnet-5-5
+tests:
+  - vars:
+      question: What is the refund window?
+    assert:
+      - type: contains
+        value: 30 days
+      - type: llm-rubric
+        value: Cites at least one source like [1]

@@ -1,0 +1,24 @@
+order_number,date,city,items,total_aed,status
+ORD-10001,2026-08-02,Abu Dhabi,2,349.00,delivered
+ORD-10002,2026-08-02,Dubai,1,129.50,delivered
+ORD-10003,2026-08-03,Sharjah,4,812.00,delivered
+ORD-10004,2026-08-05,Abu Dhabi,1,59.00,refunded
+ORD-10005,2026-08-07,Al Ain,3,455.25,delivered
+ORD-10006,2026-08-09,Dubai,2,210.00,delivered
+ORD-10007,2026-08-11,Ajman,1,1899.00,delivered
+ORD-10008,2026-08-12,Abu Dhabi,5,640.75,delivered
+ORD-10009,2026-08-15,Dubai,2,180.00,cancelled
+ORD-10010,2026-08-18,Ras Al Khaimah,1,95.00,delivered
+ORD-10011,2026-08-21,Abu Dhabi,3,520.40,delivered
+ORD-10012,2026-08-24,Dubai,6,1320.00,delivered
+ORD-10013,2026-08-27,Fujairah,2,265.00,delivered
+ORD-10014,2026-08-30,Sharjah,1,79.90,refunded
+ORD-10015,2026-09-02,Abu Dhabi,2,410.00,delivered
+ORD-10016,2026-09-04,Dubai,3,725.60,delivered
+ORD-10017,2026-09-07,Abu Dhabi,1,2499.00,delivered
+ORD-10018,2026-09-10,Al Ain,2,198.00,delivered
+ORD-10019,2026-09-14,Dubai,4,960.00,shipped
+ORD-10020,2026-09-18,Abu Dhabi,1,149.00,shipped
+ORD-10021,2026-09-21,Sharjah,2,330.50,shipped
+ORD-10022,2026-09-25,Dubai,3,615.00,processing
+ORD-10023,2026-09-28,Abu Dhabi,2,389.00,delivered

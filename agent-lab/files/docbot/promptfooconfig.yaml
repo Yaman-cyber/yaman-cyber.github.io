@@ -1,0 +1,15 @@
+# Agent Lab · Module 05 · Lesson 5: Promptfoo: evals in a config file
+# https://yaman-cyber.github.io/agent-lab/m5/#m5-l4
+# run with: npx promptfoo@latest eval
+prompts:
+  - file://prompts/docbot.txt
+providers:
+  - anthropic:messages:claude-sonnet-5-5
+tests:
+  - vars:
+      question: What is the refund window?
+    assert:
+      - type: contains
+        value: 30 days
+      - type: llm-rubric
+        value: Cites at least one source like [1]

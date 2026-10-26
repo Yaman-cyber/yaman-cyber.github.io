@@ -1,0 +1,10 @@
+// claude_desktop_config.json
+{
+  "mcpServers": {
+    "docbot": {
+      "command": "node",
+      "args": ["/path/to/docbot/mcp-server.js"],
+      "env": { "DATABASE_URL": "postgres://postgres:pw@localhost:5432/postgres", "VOYAGE_API_KEY": "pa-..." }
+    }
+  }
+}

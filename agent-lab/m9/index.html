@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 09 · Memory | Agent Lab by Yaman Arab</title>
+    <meta name="description" content="Remember users across conversations. Lessons: Chat history isn't memory, Build memory by hand, Mem0: memory as a service, Zep and Letta, briefly. Free AI agents course in JavaScript, in English and Arabic." />
+    <meta name="author" content="Yaman Arab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://yaman-cyber.github.io/agent-lab/m9/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Agent Lab · Yaman Arab" />
+    <meta property="og:title" content="Module 09 · Memory · Agent Lab" />
+    <meta property="og:description" content="Remember users across conversations. Lessons: Chat history isn't memory, Build memory by hand, Mem0: memory as a service, Zep and Letta, briefly. Free AI agents course in JavaScript, in English and Arabic." />
+    <meta property="og:url" content="https://yaman-cyber.github.io/agent-lab/m9/" />
+    <meta property="og:image" content="https://yaman-cyber.github.io/agent-lab/og/m9.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Module 09 · Memory · Agent Lab" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Module 09 · Memory · Agent Lab" />
+    <meta name="twitter:description" content="Remember users across conversations. Lessons: Chat history isn't memory, Build memory by hand, Mem0: memory as a service, Zep and Letta, briefly. Free AI agents course in JavaScript, in English and Arabic." />
+    <meta name="twitter:image" content="https://yaman-cyber.github.io/agent-lab/og/m9.png" />
+    <meta name="theme-color" content="#1e1e1f" />
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Module 09 · Memory","description":"Remember users across conversations. Lessons: Chat history isn't memory, Build memory by hand, Mem0: memory as a service, Zep and Letta, briefly. Free AI agents course in JavaScript, in English and Arabic.","url":"https://yaman-cyber.github.io/agent-lab/m9/","learningResourceType":"Lesson","educationalLevel":"Beginner","inLanguage":["en","ar"],"isAccessibleForFree":true,"author":{"@type":"Person","name":"Yaman Arab","url":"https://yaman-cyber.github.io/"},"isPartOf":{"@type":"Course","name":"Agent Lab: learn to build AI agents","url":"https://yaman-cyber.github.io/agent-lab/"},"teaches":["Chat history isn't memory","Build memory by hand","Mem0: memory as a service","Zep and Letta, briefly"]}</script>
+
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cairo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/agent-lab/assets/course.css?v=02e64c5c" />
+  </head>
+
+  <body class="course-page" data-page="m9">
+    <main>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="/assets/images/my-avatar.webp" alt="Yaman Arab" width="80" />
+          </figure>
+
+          <div class="info-content">
+            <p class="name" title="Agent Lab">Agent Lab</p>
+            <p class="title" data-x="byline">Free course · by Yaman Arab</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span data-x="showModules">Show modules</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <nav class="mod-list" id="modlist" aria-label="All modules">
+            <a class="mod-link" href="/agent-lab/m0/"><span class="icon-box">00</span><span>Start here<small>Week 1</small></span></a>
+            <a class="mod-link" href="/agent-lab/m1/"><span class="icon-box">01</span><span>Tools and the agent loop<small>Week 2</small></span></a>
+            <a class="mod-link" href="/agent-lab/m2/"><span class="icon-box">02</span><span>Structured outputs<small>Week 3</small></span></a>
+            <a class="mod-link" href="/agent-lab/m3/"><span class="icon-box">03</span><span>Embeddings and vector search<small>Week 4</small></span></a>
+            <a class="mod-link" href="/agent-lab/m4/"><span class="icon-box">04</span><span>RAG: answer from your docs<small>Week 5</small></span></a>
+            <a class="mod-link" href="/agent-lab/m5/"><span class="icon-box">05</span><span>Evals: testing AI<small>Week 6</small></span></a>
+            <a class="mod-link" href="/agent-lab/m6/"><span class="icon-box">06</span><span>Observability<small>Week 7</small></span></a>
+            <a class="mod-link" href="/agent-lab/m7/"><span class="icon-box">07</span><span>LangGraph.js<small>Weeks 8–9</small></span></a>
+            <a class="mod-link" href="/agent-lab/m8/"><span class="icon-box">08</span><span>MCP<small>Week 10</small></span></a>
+            <a class="mod-link on" href="/agent-lab/m9/"><span class="icon-box">09</span><span>Memory<small>Week 11</small></span></a>
+            <a class="mod-link" href="/agent-lab/m10/"><span class="icon-box">10</span><span>Sandboxing<small>Week 12</small></span></a>
+            <a class="mod-link" href="/agent-lab/m11/"><span class="icon-box">11</span><span>Prompt injection defense<small>Week 13</small></span></a>
+            <a class="mod-link" href="/agent-lab/m12/"><span class="icon-box">12</span><span>Code structure and refactoring<small>Week 14</small></span></a>
+            <a class="mod-link" href="/agent-lab/m13/"><span class="icon-box">13</span><span>DocBot in a real app<small>Weeks 15–16</small></span></a>
+            <a class="mod-link" href="/agent-lab/cap/"><span class="icon-box">★</span><span>Capstone: ship DocBot<small>Week 17</small></span></a>
+          </nav>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/yaman-arab-7047ab205" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li class="social-item">
+              <a href="https://github.com/Yaman-cyber" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+            </li>
+            <li class="social-item">
+              <a href="/" class="social-link" aria-label="Portfolio"><ion-icon name="person-outline"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="main-content">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href="/agent-lab/" data-x="overview">Overview</a></li>
+            <li class="navbar-item"><a class="navbar-link active" href="/agent-lab/m0/" data-x="lessons">Lessons</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="/agent-lab/#downloads" data-x="downloads">Downloads</a></li>
+            <li class="navbar-item"><button class="navbar-link lang-btn" id="lang" lang="ar" aria-label="العربية" title="العربية"><ion-icon name="language-outline" aria-hidden="true"></ion-icon><span class="lang-code">AR</span></button></li>
+          </ul>
+        </nav>
+
+        <article class="course active" id="app">
+          <span class="eyebrow">Module 09 · Week 11</span>
+          <h1 class="h2 article-title">Memory</h1>
+          <p>Remember users across conversations.</p>
+          <ol>
+            <li>Chat history isn't memory</li>
+            <li>Build memory by hand</li>
+            <li>Mem0: memory as a service</li>
+            <li>Zep and Letta, briefly</li>
+          </ol>
+          <noscript><p>This course needs JavaScript to show its lessons.</p></noscript>
+        </article>
+      </div>
+    </main>
+
+    <dialog class="viewer" id="viewer"></dialog>
+
+    <script src="/agent-lab/assets/course-data.js?v=02e64c5c"></script>
+    <script src="/agent-lab/assets/files.js?v=02e64c5c"></script>
+    <script src="/agent-lab/assets/app.js?v=02e64c5c"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

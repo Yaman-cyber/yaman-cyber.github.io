@@ -1,0 +1,4 @@
+{
+  "en": { "docbotAnswered": "Answered", "actionDecided": "Decision applied", "uploadReceived": "Document received, indexing in the background" },
+  "ar": { "docbotAnswered": "تمّت الإجابة", "actionDecided": "تمّ تطبيق القرار", "uploadReceived": "وصل المستند، وعم ينأرشف بالخلفية" }
+}

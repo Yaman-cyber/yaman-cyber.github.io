@@ -1,0 +1,15 @@
+# Local services for DocBot. Start: docker compose up -d
+services:
+  pgvector:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_PASSWORD: pw
+    ports: ["5432:5432"]
+    volumes: ["./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro"]
+  mongo:
+    image: mongo:7
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pw
+    ports: ["27017:27017"]
+    volumes: ["./mongo/init.js:/docker-entrypoint-initdb.d/init.js:ro"]   # creates the docbot user microflame logs in with

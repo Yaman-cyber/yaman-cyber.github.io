@@ -1,0 +1,4 @@
+{
+  "email": { "verifyOTP": "send-verify-otp" },
+  "docs": { "uploaded": "docs-uploaded" }
+}
